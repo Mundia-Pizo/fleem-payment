@@ -1,0 +1,7 @@
+{
+    "python.linting.enabled": false,
+    "python.linting.lintOnSave": false,
+    "python.linting.pylintEnabled": false,
+    "python.linting.pylintUseMinimalCheckers": false,
+    "python.pythonPath": "/home/mundia/fleem-env/bin/python"
+}

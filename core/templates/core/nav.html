@@ -1,0 +1,19 @@
+<nav class="row">
+    <div class="ml-8 mr-8">
+        <h1><a href="{% url 'home'%}">Home</a></h1> 
+    </div>
+    <div class="row mr-8 ml-8 center-content ">
+        <ul class="ml-40 mr-40">
+            {%if user.is_authenticated%}
+                <li><a href="{% url 'profile'%}">{{user.username}}</a></li>
+                <li><a href="{% url 'money-transfer'%}">Trasaction</a></li>
+                <li><a href="{% url 'balance'%}">Dashboard</a></li>
+                <li><a href="{% url 'logout'%}">logout</a></li>
+            {%else%}
+            <li><a href="{% url 'login'%}">login </a></li>
+            <li><a href="{% url 'register'%}">Sign up</a></li>
+            {%endif%}
+        </ul>
+    </div>
+
+</nav>

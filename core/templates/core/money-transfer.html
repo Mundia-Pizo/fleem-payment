@@ -1,0 +1,15 @@
+{% extends 'core/layout.html'%}
+{%block content%}
+{% load crispy_forms_tags%}
+     <div class="class-2">
+        <form method="POST">
+          {%csrf_token%}
+        <fieldset class="center-content form-width">
+            <div class="class-2">
+              {{form|crispy}}
+            </div>
+            <input type="submit" name="POST">
+        </fieldset>
+        </form>
+    </div
+{%endblock content%}

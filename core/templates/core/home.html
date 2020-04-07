@@ -1,0 +1,18 @@
+{% extends 'core/layout.html'%}
+{%block content%}
+   <div>
+     <div class="center-content">
+          <h6><a href="{% url 'money-transfer'%}">send money</a></h6>
+      </div>
+    {% for transfer in object_list%}
+      <div class="sent-card col-md-6">
+        {%if user.is_authenticated%}
+            <h3>sender:{{transfer.sender}}</h3>
+        {%endif%}
+        <h3>receiver:<a href="{% url 'transfer-detail' transfer.id%}">{{transfer.receiver}}</a></h3>
+        <!--h3>amount:{{transfer.amount}}</h3>
+        <h3>date:{{transfer.date}}</h3 -->
+    </div>
+    {%endfor%}
+  </div>
+{%endblock content%}
